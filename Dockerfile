@@ -23,7 +23,7 @@ RUN cd /root/amazon-dash && python setup.py install
 #ADD amazon-dash.yaml /root/amazon-dash/amazon-dash.yaml
 
 # Interface the environment
-VOLUME /root/dasher/config
+VOLUME /root/amazon-dash
 
 # Init Process To Start Amazon-Dash
 CMD cd /root/amazon-dash && sudo amazon-dash run
