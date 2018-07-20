@@ -20,7 +20,7 @@ RUN cd /root && export GIT_SSL_NO_VERIFY=1 && \
 
 WORKDIR /root/amazon-dash
 RUN cd /root/amazon-dash && python setup.py install
-ADD amazon-dash.yaml /root/amazon-dash/amazon-dash.yaml
+#ADD amazon-dash.yaml /root/amazon-dash/amazon-dash.yaml
 
 # Interface the environment
 VOLUME /root/dasher/config
