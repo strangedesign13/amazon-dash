@@ -2,8 +2,7 @@ FROM   ubuntu:latest
 MAINTAINER	Chris Strange <chris@strangedesign.net>
 
 #Install Pre-reqs
-RUN \
-    apt-get -y update && \
+RUN apt-get -y update && \
     apt-get -y upgrade && \
     apt-get install -y sudo && \
     apt-get install -y git && \
@@ -11,7 +10,8 @@ RUN \
     apt-get install -y python-setuptools && \
     apt-get install -y python-dev && \
     apt-get install -y build-essential && \
-    apt-get install -y python-pip $$ \
+    apt-get install -y python-pip && \
+    sudo pip install click
 
 #install amazon-dash
 RUN cd /root && export GIT_SSL_NO_VERIFY=1 && \
